@@ -2,10 +2,17 @@
 
 __author__ = "730365963"
 
+# The randint function is imported from the random library so that
+# you are able to generate integers at random.
+# 
+# Documentation: https://docs.python.org/3/library/random.html#random.randint
+#
+# For example, consider the function call expression: randint(1, 100)
+# It will evaluate to an int value >= 1 and <= 100. 
 from random import randint
 
-print("Your fortune cookies says...")
 fortune_cookie: int = int(randint(1, 4))
+print("Your fortune cookies says...")
 
 if fortune_cookie == 1:
     print("You will get an A in all your classes, even if you didn't drink from the Old Well on the first day of class.")
