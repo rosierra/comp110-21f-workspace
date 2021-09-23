@@ -182,6 +182,8 @@ def end() -> None:
     else: 
         if options == "stop":
             print(f"Thanks for playing! We can't wait see you for the 2025 Python Olympics {SMILEYFACE_EMOJI}")
+            print("\n")
+            main()
 
 
 if __name__ == "__main__":
