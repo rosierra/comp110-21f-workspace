@@ -50,7 +50,7 @@ def greet() -> None:
         
 
 def count() -> None:
-    """Chance count"""
+    """Chance count."""
     global chances
     chances -= 1
     print(f"You have {chances} chances left to participate in a category.")
@@ -153,6 +153,7 @@ def swimming() -> None:
     
 
 def end() -> None:
+    """End of the game."""
     print("Congratulations! You have completed the Python Olympics.")
     print("\n")
     print("Let's count up your points and see what you won.")
