@@ -157,6 +157,7 @@ def end() -> None:
     print("Congratulations! You have completed the Python Olympics.")
     print("\n")
     print("Let's count up your points and see what you won.")
+    global points
     if points == 0:
         print("Sadly, you did not win any games, so you are not eligible for a medal. Hope to see you next time!")
     else:
@@ -173,6 +174,10 @@ def end() -> None:
                     print("\n")
     options: str = str(input("Type 'restart' to restart the game, and 'stop' to stop playing: "))
     if options == "restart":
+        print("\n")
+        global chances
+        chances = 3
+        points = 0
         main()
     else: 
         if options == "stop":
