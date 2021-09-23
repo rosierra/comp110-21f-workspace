@@ -1,8 +1,8 @@
 """The Python Olympics."""
 
-from random import randint
-
 __author__ = "730365963"
+
+from random import randint
 
 chances: int = 3
 player: str 
