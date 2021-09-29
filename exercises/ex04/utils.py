@@ -14,9 +14,6 @@ def all(integers: list[int], numbers: int) -> bool:
     return True
 
 
-print(all([1, 2, 1], 1))
-
-
 def is_equal(first: list[int], second: list[int]) -> bool:
     """Return True if every element at every index is equal in both lists."""
     i: int = 0
@@ -26,10 +23,6 @@ def is_equal(first: list[int], second: list[int]) -> bool:
         else:
             return False
     return True
-
-
-print(is_equal([1, 1, 1], [1, 1, 1]))
-print(is_equal([1, 3], [2, 4, 6]))
 
 
 def max(input: list[int]) -> int:
@@ -45,6 +38,3 @@ def max(input: list[int]) -> int:
         else:
             i += 1 
     return max_value
-
-
-print(max([1, 3, 2]))
