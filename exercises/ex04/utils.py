@@ -3,7 +3,6 @@
 __author__ = "730365963"
 
 
-# TODO: Implement your functions here.
 def all(integers: list[int], numbers: int) -> bool:
     """Return True if all numbers match indicated number, False if not."""
     i: int = 0 
@@ -29,7 +28,8 @@ def is_equal(first: list[int], second: list[int]) -> bool:
     return True
 
 
-print(is_equal([1, 1, 1], [1, 0, 1]))
+print(is_equal([1, 1, 1], [1, 1, 1]))
+print(is_equal([1, 3], [2, 4, 6]))
 
 
 def max(input: list[int]) -> int:
