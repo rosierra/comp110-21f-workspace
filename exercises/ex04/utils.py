@@ -6,9 +6,10 @@ __author__ = "730365963"
 def all(integers: list[int], numbers: int) -> bool:
     """Return True if all numbers match indicated number, False if not."""
     i: int = 0 
+    if len(integers) == 0:
+        raise ValueError("all() arg is an empty List")
     while i < len(integers):
         if integers[i] == numbers:
-            return True
             i += 1
         else:
             return False
@@ -18,9 +19,10 @@ def all(integers: list[int], numbers: int) -> bool:
 def is_equal(first: list[int], second: list[int]) -> bool:
     """Return True if every element at every index is equal in both lists."""
     i: int = 0
+    if len(first) and len(second) == 0:
+        raise ValueError("is_equal() arg is an empty List")
     while i < len(first):
         if first[i] == second[i]:
-            return True
             i += 1
         else:
             return False
