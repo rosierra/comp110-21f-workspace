@@ -8,6 +8,7 @@ def all(integers: list[int], numbers: int) -> bool:
     i: int = 0 
     while i < len(integers):
         if integers[i] == numbers:
+            return True
             i += 1
         else:
             return False
@@ -19,6 +20,7 @@ def is_equal(first: list[int], second: list[int]) -> bool:
     i: int = 0
     while i < len(first):
         if first[i] == second[i]:
+            return True
             i += 1
         else:
             return False
