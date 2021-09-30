@@ -21,8 +21,8 @@ def is_equal(first: list[int], second: list[int]) -> bool:
     i: int = 0
     if len(first) and len(second) == 0:
         raise ValueError("is_equal() arg is an empty List")
-    while i < len(first):
-        if first[i] == second[i]:
+    while i < len(first) and i < len(second):
+        if second[i] == first[i]:
             i += 1
         else:
             return False
