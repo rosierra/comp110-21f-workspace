@@ -19,7 +19,7 @@ def all(integers: list[int], numbers: int) -> bool:
 def is_equal(first: list[int], second: list[int]) -> bool:
     """Return True if every element at every index is equal in both lists."""
     i: int = 0
-    if len(first) and len(second) == 0:
+    if len(first) != len(second):
         return False
     while i < len(first) and i < len(second):
         if second[i] == first[i]:
