@@ -1,31 +1,29 @@
 """Unit tests for dictionary functions."""
 
 # TODO: Uncomment the below line when ready to write unit tests
-# from exercises.ex06.dictionaries import invert, favorite_color, count
+from exercises.ex06.dictionaries import invert, favorite_color, count
+import pytest
+
 
 __author__ = "730365963"
 
 
-from exercises.ex06.dictionaries import invert, favorite_color, count
-import pytest 
-
-
 def test_invert_multiple() -> None:
     """Test the ability to invert the keys and values of a given dictionary."""
-    b: dict[str, str] = {"state": "Virginia", "beach": "Virginia beach"}
-    assert invert(b) == {"Virginia": "state", "Virginia beach": "beach"}
+    a: dict[str, str] = {"state": "Virginia", "beach": "Virginia beach"}
+    assert invert(a) == {"Virginia": "state", "Virginia beach": "beach"}
 
 
 def test_invert_same_key() -> None:
     """Test the ability to raise a key error when the same key is used more than once."""
-    b: dict[str, str] = {"apple": "orange", "strawberry": "orange"}
-    assert invert(b) == KeyError("This key has already been used.")
+    a: dict[str, str] = {"apple": "banana", "strawberry": "orange"}
+    assert invert(a) == {"banana": "apple", "orange": "strawberry"}
 
 
 def test_invert_again() -> None:
     """Test the ability to invert the keys and values of a given dictionary."""
-    b: dict[str, str] = {"love": "you"}
-    assert invert(b) == {"you": "love"}
+    a: dict[str, str] = {"love": "you"}
+    assert invert(a) == {"you": "love"}
 
 
 def test_favorite_color_many() -> None:
@@ -65,6 +63,7 @@ def test_count_frequency_of_friends() -> None:
 
 
 def test_invert_key_error() -> None:
+    """Test raise key error."""
     with pytest.raises(KeyError):
         my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
         invert(my_dictionary)
