@@ -61,12 +61,9 @@ def concat(data_cols_head: dict[str, list[str]], additional_table: dict[str, lis
     combined: dict[str, list[str]] = {}
     for key in data_cols_head:
         combined[key] = data_cols_head[key]
-    for n in additional_table:
-        column = data_cols_head[n]
-        if column in combined:
-            combined[n] = additional_table[n]
-        else: 
-            combined[n] = additional_table[n]
+    for key in additional_table:
+        if key in combined:
+            combined[key] = additional_table[key] 
     return combined 
 
 
