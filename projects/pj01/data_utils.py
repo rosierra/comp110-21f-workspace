@@ -76,3 +76,20 @@ def count(selected_data: list[str]) -> dict[str, int]:
         else:
             counted[item] = 1
     return counted
+
+
+def over_five(nums: list[int], threshold: int = 5) -> list[int]:
+    """Returns a list containing only the elements of the list that are over five."""
+    result: list[int] = []
+    for item in nums:
+        result.append(item >= threshold)
+    return result
+
+
+def converted(string_list: list[str]) -> None:
+    result: list[int] = []
+    for key in string_list:
+        result = [int(key) for key in string_list]
+        if key in string_list == "No":
+            
+        print(result)
